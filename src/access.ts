@@ -9,6 +9,7 @@ export default function access(initialState: IInitialState) {
 	const scopes = initialState.authorizedPermissions?.map((item) => item.scopes).flat();
 
 	return {
+		canAdmin: true, // Tạm thời cho phép tất cả người dùng truy cập
 		// canBoQLKH: token && vaiTro && vaiTro === 'can_bo_qlkh',
 		// lanhDao: token && vaiTro && vaiTro === 'lanh_dao',
 		// sinhVienVaNhanVien: token && vaiTro && ['nhan_vien', 'sinh_vien'].includes(vaiTro),
